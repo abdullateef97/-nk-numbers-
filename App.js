@@ -7,11 +7,13 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, StatusBar} from 'react-native';
 import {createStore, applyMiddleware} from 'redux';
 import {Provider, } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import reducers from './src/store/reducers';
+import {isDbLoaded} from './src/api/async';
+import Kernel from './src/Kernel'
 
 
 const instructions = Platform.select({
@@ -25,10 +27,24 @@ const instructions = Platform.select({
 
 const store = applyMiddleware(ReduxThunk)(applyMiddleware)
 export default class App extends Component {
+
+  state={
+    isDbLoaded:  false
+  }
+
+  async componentDidMount(){
+      try{
+        const loaded = isDbLoaded();
+        if(loaded) this.setState({isDbLoaded: true});
+        return;
+      }catch(error){
+        console.log('err here in App.js');
+      }
+  }
   
   render() {
     return (
-      <Provider store={store(reducers)}>
+      <Provider store={store(reducers)} >
         <View style={styles.container}>
           <Text style={styles.welcome}>Welcome to React Native!</Text>
           <Text style={styles.instructions}>To get started, edit App.js</Text>

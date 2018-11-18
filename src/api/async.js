@@ -11,7 +11,7 @@ export const loadDb = () => {
 export const isDbLoaded = async () => {
     try {
         const loaded = await AsyncStorage.getItem(key);
-        if(JSON.parse(loaded)) return true;
+        if(loaded && JSON.parse(loaded)) return true;
         return false;
     }catch(error){
         console.log('error checking if DB is Loaded')

@@ -1,5 +1,6 @@
-const DB = {
-    Level1 : {
+const DB = [
+     {
+        level :1,
         unlocked : true,
         numbers: [
         {
@@ -29,7 +30,8 @@ const DB = {
             alaye: 'márùn'
         }
     ]},
-    Level2: {
+     {
+         level: 2,
         unlocked: false,
         numbers : [
             {
@@ -60,7 +62,8 @@ const DB = {
             }
         ]
     },
-    Level3: {
+     {
+         level: 3,
         unlocked: false,
         numbers: [
             {
@@ -120,7 +123,8 @@ const DB = {
             }
         ]
     },
-    Level4: {
+    {
+        level: 4,
         unlocked: false, //21 23 25 27 29 30 32 34 36 38 40
         numbers: [
             {
@@ -192,7 +196,8 @@ const DB = {
             },
 
         ]},
-        Level5: {
+         {
+             level: 5,
             unlocked: false, //41 45  46 50 54 55 58 60 63 65 67 70 75 80 85 90 95 100
             numbers: [
                 {
@@ -305,7 +310,8 @@ const DB = {
                     ekun: 'ogún márùn'
                 }, 
             ]},
-        Level6 : {
+            {
+            level: 6,
             unlocked :false, //105 110 115 120 125 130 135 140 145 150
             numbers: [
                 {
@@ -371,7 +377,8 @@ const DB = {
                 }
             ]
         },
-        Level7: {
+         {
+            level: 7,
             unlocked: false, // 160 170 180 190 200
             numbers: [
                 {
@@ -406,4 +413,4 @@ const DB = {
                 }
             ]
         }
-}
+    ]

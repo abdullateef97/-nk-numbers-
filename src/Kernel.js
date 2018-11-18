@@ -1,11 +1,11 @@
 import {Router, Stack, Scene,Drawer} from 'react-native-router-flux';
 
-const Kernel = () => {
+const Kernel = ({loaded}) => {
     return (
         <Router>
-
+            
         </Router>
     )
 }
 
-export default Kernel;
+export default Kernel; 

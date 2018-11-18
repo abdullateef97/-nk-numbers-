@@ -1,5 +1,6 @@
-const db = {
-    Level1 : {
+const db = [
+    {
+        level: 1,
         unlocked: true,
         arithmetic : [
             {
@@ -35,7 +36,8 @@ const db = {
             }
         ]
     },
-    Level2 : {
+    {
+        level: 2,
         unlocked: false,
         arithmetic : [
             {
@@ -77,7 +79,8 @@ const db = {
             }
         ]
     },
-    Level3 : {
+     {
+        level: 3,
         unlocked: false,
         arithmetic : [
             {
@@ -118,4 +121,4 @@ const db = {
             }
         ]
     }
-}
+]
