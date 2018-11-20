@@ -11,3 +11,68 @@ SERVER: changeWatchedFiles: size -> 21
 SERVER: changeWatchedFiles: size -> 1
 SERVER: changeWatchedFiles: size -> 2
 SERVER: changeWatchedFiles: size -> 1
+Setting client pid to 29931
+SERVER: changeConfig: settings -> {"xml":{},"java":{"home":null,"jdt":{"ls":{"vmargs":"-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication"}},"errors":{"incompleteClasspath":{"severity":"ignore"}},"configuration":{"updateBuildConfiguration":"interactive","maven":{"userSettings":null}},"trace":{"server":"off"},"import":{"gradle":{"enabled":true},"maven":{"enabled":true},"exclusions":["**/node_modules/**","**/.metadata/**","**/archetype-resources/**","**/META-INF/maven/**"]},"referencesCodeLens":{"enabled":false},"signatureHelp":{"enabled":false},"implementationsCodeLens":{"enabled":false},"format":{"enabled":true,"settings":{"url":null,"profile":null},"comments":{"enabled":true},"onType":{"enabled":true}},"saveActions":{"organizeImports":false},"contentProvider":{"preferred":null},"autobuild":{"enabled":true},"completion":{"enabled":true,"overwrite":true,"guessMethodArguments":false,"favoriteStaticMembers":["org.junit.Assert.*","org.junit.Assume.*","org.junit.jupiter.api.Assertions.*","org.junit.jupiter.api.Assumptions.*","org.junit.jupiter.api.DynamicContainer.*","org.junit.jupiter.api.DynamicTest.*","org.mockito.Mockito.*","org.mockito.ArgumentMatchers.*","org.mockito.Answers.*"],"importOrder":["java","javax","com","org"]},"progressReports":{"enabled":true},"debug":{"logLevel":"warn","settings":{"showHex":false,"showStaticVariables":true,"showQualifiedNames":false,"maxStringLength":0,"enableHotCodeReplace":true,"enableRunDebugCodeLens":true}},"test":{"report":{"position":"sideView"}}}}
+SERVER: changeWatchedFiles: size -> 1
+SERVER: changeWatchedFiles: size -> 92
+SERVER: changeWatchedFiles: size -> 1
+SERVER: changeWatchedFiles: size -> 1
+SERVER: changeWatchedFiles: size -> 1
+SERVER: changeWatchedFiles: size -> 1
+SERVER: changeWatchedFiles: size -> 22
+Setting client pid to 6014
+SERVER: changeConfig: settings -> {"xml":{},"java":{"home":null,"jdt":{"ls":{"vmargs":"-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication"}},"errors":{"incompleteClasspath":{"severity":"ignore"}},"configuration":{"updateBuildConfiguration":"interactive","maven":{"userSettings":null}},"trace":{"server":"off"},"import":{"gradle":{"enabled":true},"maven":{"enabled":true},"exclusions":["**/node_modules/**","**/.metadata/**","**/archetype-resources/**","**/META-INF/maven/**"]},"referencesCodeLens":{"enabled":false},"signatureHelp":{"enabled":false},"implementationsCodeLens":{"enabled":false},"format":{"enabled":true,"settings":{"url":null,"profile":null},"comments":{"enabled":true},"onType":{"enabled":true}},"saveActions":{"organizeImports":false},"contentProvider":{"preferred":null},"autobuild":{"enabled":true},"completion":{"enabled":true,"overwrite":true,"guessMethodArguments":false,"favoriteStaticMembers":["org.junit.Assert.*","org.junit.Assume.*","org.junit.jupiter.api.Assertions.*","org.junit.jupiter.api.Assumptions.*","org.junit.jupiter.api.DynamicContainer.*","org.junit.jupiter.api.DynamicTest.*","org.mockito.Mockito.*","org.mockito.ArgumentMatchers.*","org.mockito.Answers.*"],"importOrder":["java","javax","com","org"]},"progressReports":{"enabled":true},"debug":{"logLevel":"warn","settings":{"showHex":false,"showStaticVariables":true,"showQualifiedNames":false,"maxStringLength":0,"enableHotCodeReplace":true,"enableRunDebugCodeLens":true}},"test":{"report":{"position":"sideView"}}}}
+Shutting down language server
+Stopping language server
+Setting client pid to 17659
+SERVER: changeConfig: settings -> {"xml":{},"java":{"home":null,"jdt":{"ls":{"vmargs":"-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication"}},"errors":{"incompleteClasspath":{"severity":"ignore"}},"configuration":{"updateBuildConfiguration":"interactive","maven":{"userSettings":null}},"trace":{"server":"off"},"import":{"gradle":{"enabled":true},"maven":{"enabled":true},"exclusions":["**/node_modules/**","**/.metadata/**","**/archetype-resources/**","**/META-INF/maven/**"]},"referencesCodeLens":{"enabled":false},"signatureHelp":{"enabled":false},"implementationsCodeLens":{"enabled":false},"format":{"enabled":true,"settings":{"url":null,"profile":null},"comments":{"enabled":true},"onType":{"enabled":true}},"saveActions":{"organizeImports":false},"contentProvider":{"preferred":null},"autobuild":{"enabled":true},"completion":{"enabled":true,"overwrite":true,"guessMethodArguments":false,"favoriteStaticMembers":["org.junit.Assert.*","org.junit.Assume.*","org.junit.jupiter.api.Assertions.*","org.junit.jupiter.api.Assumptions.*","org.junit.jupiter.api.DynamicContainer.*","org.junit.jupiter.api.DynamicTest.*","org.mockito.Mockito.*","org.mockito.ArgumentMatchers.*","org.mockito.Answers.*"],"importOrder":["java","javax","com","org"]},"progressReports":{"enabled":true},"debug":{"logLevel":"warn","settings":{"showHex":false,"showStaticVariables":true,"showQualifiedNames":false,"maxStringLength":0,"enableHotCodeReplace":true,"enableRunDebugCodeLens":true}},"test":{"report":{"position":"sideView"}}}}
+Shutting down language server
+Setting client pid to 14840
+SERVER: changeConfig: settings -> {"xml":{},"java":{"home":null,"jdt":{"ls":{"vmargs":"-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication"}},"errors":{"incompleteClasspath":{"severity":"ignore"}},"configuration":{"updateBuildConfiguration":"interactive","maven":{"userSettings":null}},"trace":{"server":"off"},"import":{"gradle":{"enabled":true},"maven":{"enabled":true},"exclusions":["**/node_modules/**","**/.metadata/**","**/archetype-resources/**","**/META-INF/maven/**"]},"referencesCodeLens":{"enabled":false},"signatureHelp":{"enabled":false},"implementationsCodeLens":{"enabled":false},"format":{"enabled":true,"settings":{"url":null,"profile":null},"comments":{"enabled":true},"onType":{"enabled":true}},"saveActions":{"organizeImports":false},"contentProvider":{"preferred":null},"autobuild":{"enabled":true},"completion":{"enabled":true,"overwrite":true,"guessMethodArguments":false,"favoriteStaticMembers":["org.junit.Assert.*","org.junit.Assume.*","org.junit.jupiter.api.Assertions.*","org.junit.jupiter.api.Assumptions.*","org.junit.jupiter.api.DynamicContainer.*","org.junit.jupiter.api.DynamicTest.*","org.mockito.Mockito.*","org.mockito.ArgumentMatchers.*","org.mockito.Answers.*"],"importOrder":["java","javax","com","org"]},"progressReports":{"enabled":true},"debug":{"logLevel":"warn","settings":{"showHex":false,"showStaticVariables":true,"showQualifiedNames":false,"maxStringLength":0,"enableHotCodeReplace":true,"enableRunDebugCodeLens":true}},"test":{"report":{"position":"sideView"}}}}
+didOpen: TextDocumentItem [
+  uri = "file:///home/belle/WebstormProjects/RN/no/android/app/src/main/java/com/no/MainApplication.java"
+  languageId = "java"
+  version = 1
+  text = "package com.no;\n\nimport android.app.Application;\n\nimport com.facebook.react.ReactApplication;\nimport io.realm.react.RealmReactPackage;\nimport com.oblador.vectoricons.VectorIconsPackage;\nimport com.facebook.react.ReactNativeHost;\nimport com.facebook.react.ReactPackage;\nimport com.facebook.react.shell.MainReactPackage;\nimport com.facebook.soloader.SoLoader;\n\nimport java.util.Arrays;\nimport java.util.List;\n\npublic class MainApplication extends Application implements ReactApplication {\n\n  private final ReactNativeHost mReactNativeHost = new ReactNativeHost(this) {\n    @Override\n    public boolean getUseDeveloperSupport() {\n      return BuildConfig.DEBUG;\n    }\n\n    @Override\n    protected List<ReactPackage> getPackages() {\n      return Arrays.<ReactPackage>asList(\n          new MainReactPackage(),\n            new RealmReactPackage(),\n            new VectorIconsPackage()\n      );\n    }\n\n    @Override\n    protected String getJSMainModuleName() {\n      return "index";\n    }\n  };\n\n  @Override\n  public ReactNativeHost getReactNativeHost() {\n    return mReactNativeHost;\n  }\n\n  @Override\n  public void onCreate() {\n    super.onCreate();\n    SoLoader.init(this, /* native exopackage */ false);\n  }\n}\n"
+]
+documentSymbol: TextDocumentIdentifier [
+  uri = "file:///home/belle/WebstormProjects/RN/no/android/app/src/main/java/com/no/MainApplication.java"
+]
+documentSymbol: TextDocumentIdentifier [
+  uri = "file:///home/belle/WebstormProjects/RN/no/android/app/src/main/java/com/no/MainApplication.java"
+]
+Cannot determine document symbols
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:257)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:121)
+	at com.github.cameltooling.lsp.internal.parser.ParserXMLFileHelper.hasElementFromCamelNamespace(ParserXMLFileHelper.java:104)
+	at com.github.cameltooling.lsp.internal.parser.ParserXMLFileHelper.getNodesOfType(ParserXMLFileHelper.java:154)
+	at com.github.cameltooling.lsp.internal.parser.ParserXMLFileHelper.getRouteNodes(ParserXMLFileHelper.java:146)
+	at com.github.cameltooling.lsp.internal.documentsymbol.DocumentSymbolProcessor.lambda$getDocumentSymbols$0(DocumentSymbolProcessor.java:51)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1582)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+Cannot determine document symbols
+org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Content is not allowed in prolog.
+	at com.sun.org.apache.xerces.internal.parsers.DOMParser.parse(DOMParser.java:257)
+	at com.sun.org.apache.xerces.internal.jaxp.DocumentBuilderImpl.parse(DocumentBuilderImpl.java:339)
+	at javax.xml.parsers.DocumentBuilder.parse(DocumentBuilder.java:121)
+	at com.github.cameltooling.lsp.internal.parser.ParserXMLFileHelper.hasElementFromCamelNamespace(ParserXMLFileHelper.java:104)
+	at com.github.cameltooling.lsp.internal.parser.ParserXMLFileHelper.getNodesOfType(ParserXMLFileHelper.java:154)
+	at com.github.cameltooling.lsp.internal.parser.ParserXMLFileHelper.getRouteNodes(ParserXMLFileHelper.java:146)
+	at com.github.cameltooling.lsp.internal.documentsymbol.DocumentSymbolProcessor.lambda$getDocumentSymbols$0(DocumentSymbolProcessor.java:51)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.run(CompletableFuture.java:1590)
+	at java.util.concurrent.CompletableFuture$AsyncSupply.exec(CompletableFuture.java:1582)
+	at java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:289)
+	at java.util.concurrent.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1056)
+	at java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1692)
+	at java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:157)
+didClose: TextDocumentIdentifier [
+  uri = "file:///home/belle/WebstormProjects/RN/no/android/app/src/main/java/com/no/MainApplication.java"
+]
+Setting client pid to 7106
+SERVER: changeConfig: settings -> {"xml":{},"java":{"home":null,"jdt":{"ls":{"vmargs":"-noverify -Xmx1G -XX:+UseG1GC -XX:+UseStringDeduplication"}},"errors":{"incompleteClasspath":{"severity":"ignore"}},"configuration":{"updateBuildConfiguration":"interactive","maven":{"userSettings":null}},"trace":{"server":"off"},"import":{"gradle":{"enabled":true},"maven":{"enabled":true},"exclusions":["**/node_modules/**","**/.metadata/**","**/archetype-resources/**","**/META-INF/maven/**"]},"referencesCodeLens":{"enabled":false},"signatureHelp":{"enabled":false},"implementationsCodeLens":{"enabled":false},"format":{"enabled":true,"settings":{"url":null,"profile":null},"comments":{"enabled":true},"onType":{"enabled":true}},"saveActions":{"organizeImports":false},"contentProvider":{"preferred":null},"autobuild":{"enabled":true},"completion":{"enabled":true,"overwrite":true,"guessMethodArguments":false,"favoriteStaticMembers":["org.junit.Assert.*","org.junit.Assume.*","org.junit.jupiter.api.Assertions.*","org.junit.jupiter.api.Assumptions.*","org.junit.jupiter.api.DynamicContainer.*","org.junit.jupiter.api.DynamicTest.*","org.mockito.Mockito.*","org.mockito.ArgumentMatchers.*","org.mockito.Answers.*"],"importOrder":["java","javax","com","org"]},"progressReports":{"enabled":true},"debug":{"logLevel":"warn","settings":{"showHex":false,"showStaticVariables":true,"showQualifiedNames":false,"maxStringLength":0,"enableHotCodeReplace":true,"enableRunDebugCodeLens":true}},"test":{"report":{"position":"sideView"}}}}

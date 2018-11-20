@@ -6,22 +6,22 @@ const DB = [
         {
             number : 1,
             yoruba : 'ọ̀kan',
-            explanation: 1,
+            explanation: '1',
             alaye : 'ọ̀kan'
         },{
             number :2,
             yoruba: 'méjì',
-            explanation: 2,
+            explanation: '2',
             alaye: 'mejì'
         },{
             number:3,
             yoruba: 'mẹ́ta',
-            explanation: 3,
+            explanation: '3',
             alaye: 'mẹ́ta'
         },{
             number: 4,
             yoruba: 'mẹ́rin',
-            explanation: 4,
+            explanation: '4',
             alaye: 'ḿẹrin'
         },{
             number: 5,
@@ -414,3 +414,5 @@ const DB = [
             ]
         }
     ]
+
+    export default DB;
