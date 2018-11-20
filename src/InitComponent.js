@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ToastAndroid} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import {addNumbers, fetchNumbers} from './models/numberModel';
 import Numbers from './db/numbers';
@@ -10,17 +10,14 @@ class InitComponent extends Component {
     componentDidMount(){
         fetchNumbers().then((no) => {
             console.log('90', no)
-            Actions.p1();
+            ToastAndroid.show('gggggg', ToastAndroid.LONG)
         }).catch(err => console.log('errrrr', err))
     }
     render(){
-        return(        
+        return(
+
             <View>
-                <Text>olooofoog</Text>
-                <Text>olooofoog</Text>
-                <Text>olooofoog</Text>
-                <Text>olooofoog</Text>
-                <Text>olooofoog</Text>
+                <Text>999999</Text>
             </View>
         )
 

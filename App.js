@@ -22,7 +22,7 @@ export default class App extends Component {
 
   async componentDidMount(){
       try{
-        const loaded = isDbLoaded();
+        const loaded = await isDbLoaded();
         if(loaded) this.setState({isDbLoaded: true});
         return;
       }catch(error){
@@ -32,16 +32,15 @@ export default class App extends Component {
   
   render() {
     return (
-        <Provider store={storeWithRed} >
-          <View>
+      <View style={{flex: 1}}>
             <StatusBar
                 backgroundColor={colors.primaryLight}
                 barStyle="light-content"
             />
-            <Kernel loaded={this.state.isDbLoaded} />
-          </View>
+        <Provider store={storeWithRed} >          
+        <Kernel loaded={this.state.isDbLoaded} />
         </Provider>
-      
+      </View>
     );
   }
 }
