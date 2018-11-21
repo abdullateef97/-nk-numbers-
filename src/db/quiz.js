@@ -1,7 +1,7 @@
 const db = [
     {
         level: 1,
-        unlocked: true,
+        unlocked: false,
         arithmetic : [
             {
                 exp: 'ọ̀kan + méjì',

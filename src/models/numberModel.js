@@ -69,7 +69,7 @@ export const unLockLevel = (level) => new Promise((resolve, reject) => {
         realm.write(() => {
             let number = realm.objectForPrimaryKey(NUMBER_LEVELS_LIST, level);
             number.unlocked = true;
-            return resolve();
+            return resolve(number);
         })
     }).catch(err => reject(err))
 })
