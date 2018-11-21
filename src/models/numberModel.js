@@ -4,7 +4,6 @@ export const NUMBER_LEVELS_LIST = "number_levels_list";
 export const NUMBER_ITEM  = "number_item";
 
 
-
 export const numberListSchema = {
     name: NUMBER_LEVELS_LIST, 
     primaryKey: "level",
