@@ -3,13 +3,14 @@ import {View, Text, ToastAndroid} from 'react-native';
 import {Actions} from 'react-native-router-flux';
 import {addNumbers, fetchNumbers} from './models/numberModel';
 import Numbers from './db/numbers';
-import {} from './api/async';
+import {loadDb} from './api/async';
 
 
 class InitComponent extends Component {
     componentDidMount(){
-        fetchNumbers().then((no) => {
+        addNumbers(Numbers).then((no) => {
             console.log('90', no)
+            loadDb();
             ToastAndroid.show('gggggg', ToastAndroid.LONG)
         }).catch(err => console.log('errrrr', err))
     }

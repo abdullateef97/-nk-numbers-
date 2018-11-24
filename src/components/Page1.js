@@ -1,10 +1,13 @@
 import React, { Component } from 'react'
-import { Text, View } from 'react-native'
+import { Text, View, ToastAndroid } from 'react-native'
+import {addNumbers, fetchNumbers} from '../models/numberModel';
 
 export default class Page1 extends Component {
   componentDidMount(){
-    console.log(11111);
-  }
+    fetchNumbers().then((no) => {
+        ToastAndroid.show('gggggg', ToastAndroid.LONG)
+    }).catch(err => console.log('errrrr', err))
+}
   render() {
     return (
       <View>

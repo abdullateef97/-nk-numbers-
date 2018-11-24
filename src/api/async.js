@@ -2,8 +2,8 @@ import React from 'react';
 
 import {AsyncStorage} from 'react-native';
 
-const key = "OOnka__opeit98iogk6ihhi_-db";
-const levelKey = "OOnka__opeit98iogk6ihhi_-level";
+const key = "OOnka__opeit98iog_-db";
+const levelKey = "OOnka__opeit98iog_-level";
 
 export const getCurrentLevel = async () => {
     try {
@@ -16,11 +16,12 @@ export const getCurrentLevel = async () => {
 
 export const setLevel = async () => {
     const currentLevel = await getCurrentLevel();
-    if(currentLevel){
+    if(!currentLevel) currentLevel = 0
+    
         let newLevel = currentLevel+1;
-        return AsyncStorage.setItem(levelKey, JSON.stringify({level: newLevel}));
-    }
-    return;
+        await AsyncStorage.setItem(levelKey, JSON.stringify({level: newLevel}));
+        return newLevel
+    
 }
 export const loadDb = () => {
     return AsyncStorage.setItem(key, JSON.stringify(true));

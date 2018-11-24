@@ -1,6 +1,6 @@
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, StatusBar} from 'react-native';
+import {StyleSheet, Text, View, StatusBar, ActivityIndicator} from 'react-native';
 import { applyMiddleware, createStore} from 'redux';
 import {Provider, } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
@@ -17,17 +17,17 @@ const storeWithRed = store(reducers)
 export default class App extends Component {
 
   state = {
-    isDbLoaded:  false
+    isDbLoaded:  false,
+    loading: true
   }
 
   async componentDidMount(){
-      try{
-        const loaded = await isDbLoaded();
-        if(loaded) this.setState({isDbLoaded: true});
+
+      return isDbLoaded().then(loaded => {
+        console.log(loaded, 'lp')
+        this.setState({isDbLoaded: loaded, loading: false});
         return;
-      }catch(error){
-        console.log('err here in App.js');
-      }
+      })
   }
   
   render() {
@@ -37,11 +37,26 @@ export default class App extends Component {
                 backgroundColor={colors.primaryLight}
                 barStyle="light-content"
             />
-        <Provider store={storeWithRed} >          
-        <Kernel loaded={this.state.isDbLoaded} />
-        </Provider>
+          {this._renderContent()}
       </View>
     );
+  }
+
+  _renderContent(){
+    if(this.state.loading) {
+      return (
+        <View style={{flex: 1,justifyContent: 'center', alignItems: 'center'}}>
+          <ActivityIndicator color={colors.primary} size={'large'}/>
+        </View>
+      )
+    }else{
+
+      return ( 
+        <Provider store={storeWithRed} >          
+            <Kernel loaded={this.state.isDbLoaded} />
+        </Provider>
+      )
+    }
   }
 }
 
