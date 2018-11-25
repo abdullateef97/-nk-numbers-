@@ -1,4 +1,4 @@
 
+import * as LevelActions from '../data/level/actions';
 
-
-export default Actions = Object.assign({},)
+export default ActionCreators = Object.assign({}, LevelActions)

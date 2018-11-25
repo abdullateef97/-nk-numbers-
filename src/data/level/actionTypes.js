@@ -1,4 +1,4 @@
 
-export const Db_loading_start = 'DB_LOADING_START';
-export const Db_loading_success = 'DB_LOADING_SUCCESS';
-export const Db_loading_failed = 'DB_LOADING_FAILED'; 
+export const level_loading_start = 'LEVEL_LOADING_START';
+export const level_loading_success = 'LEVEL_LOADING_SUCCESS';
+export const level_loading_failed = 'LEVEL_LOADING_FAILED'; 

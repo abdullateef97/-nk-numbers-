@@ -1,12 +1,12 @@
 
 import React, {Component} from 'react';
-import {StyleSheet, Text, View, StatusBar, ActivityIndicator} from 'react-native';
+import {StyleSheet, View, StatusBar, ActivityIndicator} from 'react-native';
 import { applyMiddleware, createStore} from 'redux';
-import {Provider, } from 'react-redux';
+import {Provider } from 'react-redux';
 import ReduxThunk from 'redux-thunk';
 import reducers from './src/store/reducers';
 import {isDbLoaded} from './src/api/async';
-import Kernel from './src/Kernel';
+import Routes from './src/Routes';
 import colors from './src/api/colors';
 
 
@@ -22,9 +22,7 @@ export default class App extends Component {
   }
 
   async componentDidMount(){
-
       return isDbLoaded().then(loaded => {
-        console.log(loaded, 'lp')
         this.setState({isDbLoaded: loaded, loading: false});
         return;
       })
@@ -53,7 +51,7 @@ export default class App extends Component {
 
       return ( 
         <Provider store={storeWithRed} >          
-            <Kernel loaded={this.state.isDbLoaded} />
+            <Routes loaded={this.state.isDbLoaded} />
         </Provider>
       )
     }

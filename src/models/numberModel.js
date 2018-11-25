@@ -1,4 +1,6 @@
 import Realm from 'realm';
+// import {dbOptions} from './dbOption'
+import {quizListSchema, arithSchema} from './quizModel'
 
 export const NUMBER_LEVELS_LIST = "number_levels_list";
 export const NUMBER_ITEM  = "number_item";
@@ -28,7 +30,7 @@ export const numberSchema = {
 
 const dbOptions = {
     path: 'oonka.realm',
-    schema: [numberListSchema, numberSchema],
+    schema: [ numberListSchema, numberSchema],
     schemaVersion: 0
 };
 
@@ -42,6 +44,7 @@ export const addNumbers = numbers => new Promise((resolve, reject) => {
             return resolve();
         })
     }).catch(err => reject(err));
+    
 })
 
 

@@ -1,4 +1,5 @@
 import {combineReducers} from 'redux';
+import levelRed  from '../data/level/reducers';
 
 const test = (state = {}, action) => {
     switch(action.type){
@@ -8,6 +9,6 @@ const test = (state = {}, action) => {
 }
 
  export default combineReducers({
-    state: (state = {}) => state
+    level : levelRed
 })
 

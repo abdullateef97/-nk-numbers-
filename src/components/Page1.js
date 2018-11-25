@@ -1,10 +1,12 @@
 import React, { Component } from 'react'
 import { Text, View, ToastAndroid } from 'react-native'
 import {addNumbers, fetchNumbers} from '../models/numberModel';
+import {fetchQuiz} from '../models/quizModel'
 
 export default class Page1 extends Component {
   componentDidMount(){
-    fetchNumbers().then((no) => {
+    fetchQuiz().then((no) => {
+      console.log('qq', no)
         ToastAndroid.show('gggggg', ToastAndroid.LONG)
     }).catch(err => console.log('errrrr', err))
 }

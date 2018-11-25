@@ -1,28 +1,81 @@
 import React, {Component} from 'react';
-import {View, Text, ToastAndroid} from 'react-native';
+import {View, Text, ToastAndroid, StyleSheet, ProgressBarAndroid} from 'react-native';
 import {Actions} from 'react-native-router-flux';
-import {addNumbers, fetchNumbers} from './models/numberModel';
+import {connect,} from 'react-redux';
+import {bindActionCreators} from 'redux'
+import {addNumbers, } from './models/numberModel';
+import {addQuiz} from './models/quizModel'
 import Numbers from './db/numbers';
+import Quiz from './db/quiz'
+import ActionsCreators from './store/actions';
 import {loadDb} from './api/async';
+import colors from './api/colors';
 
 
 class InitComponent extends Component {
+    state = {
+        stage : 'Numbers'
+    }
     componentDidMount(){
-        addNumbers(Numbers).then((no) => {
-            console.log('90', no)
-            loadDb();
-            ToastAndroid.show('gggggg', ToastAndroid.LONG)
+        addNumbers(Numbers).then(() => {
+            this.setState({stage: 'Quiz'})
+            addQuiz(Quiz).then(() => {
+                loadDb();
+                this.props.setLevel();
+                Actions.p1();
+            })
         }).catch(err => console.log('errrrr', err))
     }
     render(){
         return(
 
-            <View>
-                <Text>999999</Text>
+            <View style={styles.containerStyle}>
+                <Text style={styles.onka}>Ònkà Yorùbá</Text>
+                <Text style={styles.number}>Yoruba Numerals</Text>
+
+                <View style={styles.progressContainer}>
+                    <Text style={{color: colors.tert, fontWeight: '400'}}>Setting Up -- {this.state.stage}</Text>
+                    <ProgressBarAndroid styleAttr="Horizontal" style={{width: '100%', marginTop: 10}}/>
+                </View>
             </View>
         )
 
     }
 }
 
-export default InitComponent;
+const styles = StyleSheet.create({
+    containerStyle: {
+        flex:1,
+        backgroundColor: colors.primary,
+        justifyContent: 'center',
+        alignItems: 'center',
+    },
+    onka: {
+        fontSize: 24,
+        fontWeight: '600',
+        letterSpacing: 9,
+        color: colors.white,
+        marginBottom: 8
+    },
+    number: {
+        fontSize: 17,
+        fontWeight: '400',
+        letterSpacing: 4,
+        color: colors.tert
+    },
+    progressContainer: {
+        marginTop: 140,
+        width: '60%',
+        justifyContent: 'center',
+        alignItems: 'center'
+    }
+
+})
+
+const mapDispatchToProps = dispatch => {
+    return bindActionCreators({
+        setLevel: ActionsCreators.setLevel
+    })
+}
+
+export default connect(null, mapDispatchToProps)(InitComponent);

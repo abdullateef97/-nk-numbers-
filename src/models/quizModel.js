@@ -1,7 +1,9 @@
 import Realm from 'realm';
-
+// import {dbOptions} from './dbOption'
+import {numberListSchema, numberSchema} from './numberModel'
 export const QUIZ_LEVELS_LIST = "quiz_levels_list";
 export const QUIZ_ITEM  = "quiz_item";
+export const OPTIONS ='options';
 
 
 
@@ -20,11 +22,20 @@ export const arithSchema = {
     primaryKey: "exp",
     properties: {
         exp: 'string',
-        options: 'list',
-        correctIndex: 'int'
+        options: {type: 'list', objectType: 'string'},
+        correctOption: 'int'
     }
 }
-
+export const optionSchema = {
+    name : OPTIONS,
+    primaryKey: 'a',
+    properties: {
+        a: 'string',
+        b:'string',
+        c:'string',
+        d:'string',
+    }
+}
 const dbOptions = {
     path: 'oonka.realm',
     schema: [quizListSchema, arithSchema],
