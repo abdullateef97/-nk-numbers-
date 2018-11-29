@@ -21,15 +21,20 @@ const LevelLoadingSuccess = (dispatch, activeLevel) => {
     })
 }
 
-export const getLevel = dispatch => {
-    LevelLoadingStart(dispatch);
-    return getCurrentLevel().then(currentLev => {
-        LevelLoadingSuccess(dispatch, currentLev)
-    })
+export const getLevel = () => {
+
+    return dispatch => {
+        LevelLoadingStart(dispatch);
+        return getCurrentLevel().then(currentLev => {
+            LevelLoadingSuccess(dispatch, currentLev)
+        })
+    }
 };
 
-export const setLevel = dispatch => {
-    return setNewLevel().then(newLev => {
-        LevelLoadingSuccess(dispatch, newLev)
-    })
+export const setLevel = () => {
+    return dispatch => {
+        return setNewLevel().then(newLev => {
+            LevelLoadingSuccess(dispatch, newLev)
+        })
+    } 
 }

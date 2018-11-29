@@ -29,7 +29,7 @@ export const numberSchema = {
 }
 
 const dbOptions = {
-    path: 'oonka.realm',
+    path: 'oonka_number.realm',
     schema: [ numberListSchema, numberSchema],
     schemaVersion: 0
 };

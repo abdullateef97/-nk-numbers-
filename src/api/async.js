@@ -8,6 +8,7 @@ const levelKey = "OOnka__opeit98iog_-level";
 export const getCurrentLevel = async () => {
     try {
         const currentLevel = await AsyncStorage.getItem(levelKey);
+        if(!currentLevel) return null;
         return (JSON.parse(currentLevel).level);
     }catch(err){
         console.log('err getting current level', err)
@@ -15,7 +16,7 @@ export const getCurrentLevel = async () => {
 }
 
 export const setLevel = async () => {
-    const currentLevel = await getCurrentLevel();
+    let currentLevel = await getCurrentLevel();
     if(!currentLevel) currentLevel = 0
     
         let newLevel = currentLevel+1;

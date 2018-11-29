@@ -1,6 +1,6 @@
 import Realm from 'realm';
 // import {dbOptions} from './dbOption'
-import {numberListSchema, numberSchema} from './numberModel'
+// import {numberListSchema, numberSchema} from './numberModel'
 export const QUIZ_LEVELS_LIST = "quiz_levels_list";
 export const QUIZ_ITEM  = "quiz_item";
 export const OPTIONS ='options';
@@ -37,7 +37,7 @@ export const optionSchema = {
     }
 }
 const dbOptions = {
-    path: 'oonka.realm',
+    path: 'oonka_quiz.realm',
     schema: [quizListSchema, arithSchema],
     schemaVersion: 0
 };

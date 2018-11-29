@@ -17,13 +17,16 @@ class InitComponent extends Component {
         stage : 'Numbers'
     }
     componentDidMount(){
+        console.log('1111111111111111')
         addNumbers(Numbers).then(() => {
             this.setState({stage: 'Quiz'})
-            addQuiz(Quiz).then(() => {
-                loadDb();
-                this.props.setLevel();
-                Actions.p1();
-            })
+            setTimeout(() => {
+                addQuiz(Quiz).then(() => {
+                    loadDb();
+                    this.props.setLevel();
+                    Actions.main();
+                })
+            },500)     
         }).catch(err => console.log('errrrr', err))
     }
     render(){
@@ -75,7 +78,7 @@ const styles = StyleSheet.create({
 const mapDispatchToProps = dispatch => {
     return bindActionCreators({
         setLevel: ActionsCreators.setLevel
-    })
+    }, dispatch)
 }
 
 export default connect(null, mapDispatchToProps)(InitComponent);

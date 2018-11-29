@@ -10,7 +10,10 @@ const Kernel = ({loaded}) => {
         <Router sceneStyle={{flex: 1}} navigationBarStyle={{backgroundColor : colors.primary}} headerMode="screen" titleStyle={{color: 'white'}}>
             <Stack key="root">
                 <Scene key="init" component={Init} initial={!loaded} hideNavBar={true}/>
-                <Scene key="p1" component={P1} initial={loaded} title="ooo"/>
+
+                <Stack key="main" initial={loaded} hideNavBar={true}>
+                    <Scene key="p1" component={P1}  title="ooo" hideNavBar={false}/>
+                </Stack>
             </Stack>
         </Router>
     )
