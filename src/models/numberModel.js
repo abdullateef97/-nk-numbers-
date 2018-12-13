@@ -48,7 +48,7 @@ export const addNumbers = numbers => new Promise((resolve, reject) => {
 })
 
 
-export const fetchNumbers = () => new Promise((resolve, reject) => {
+export const fetchAllNumbers = () => new Promise((resolve, reject) => {
     Realm.open(dbOptions).then(realm => {
         realm.write(() => {
             let numbers = realm.objects(NUMBER_LEVELS_LIST);
@@ -57,7 +57,7 @@ export const fetchNumbers = () => new Promise((resolve, reject) => {
     })
 })
 
-export const fetchLevel = (level) => new Promise((resolve, reject) => {
+export const fetchNumber = (level) => new Promise((resolve, reject) => {
     Realm.open(dbOptions).then(realm => {
         realm.write(() => {
             let number = realm.objectForPrimaryKey(NUMBER_LEVELS_LIST, level);
