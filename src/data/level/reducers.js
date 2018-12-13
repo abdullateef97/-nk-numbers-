@@ -3,7 +3,7 @@ import {level_loading_start, level_loading_failed, level_loading_success} from '
 
 const initState = {
     isLoadingLevel: false,
-    activeLevel: null
+    activeLevel: 1
 }
 
 const LevelReducer = (state = initState, actions) => {

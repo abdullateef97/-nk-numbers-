@@ -49,7 +49,7 @@ export default class App extends Component {
       )
     }else{
 
-      return ( 
+      return (
         <Provider store={storeWithRed} >          
             <Routes loaded={this.state.isDbLoaded} />
         </Provider>

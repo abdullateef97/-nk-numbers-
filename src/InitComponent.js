@@ -14,20 +14,21 @@ import colors from './api/colors';
 
 class InitComponent extends Component {
     state = {
-        stage : 'Numbers'
+        stage : 'Ònkà'
     }
     componentDidMount(){
-        console.log('1111111111111111')
-        addNumbers(Numbers).then(() => {
-            this.setState({stage: 'Quiz'})
-            setTimeout(() => {
-                addQuiz(Quiz).then(() => {
-                    loadDb();
-                    this.props.setLevel();
-                    Actions.main();
-                })
-            },500)     
-        }).catch(err => console.log('errrrr', err))
+        setTimeout(() => {
+            addNumbers(Numbers).then(() => {
+                this.setState({stage: 'ìdánwò'})
+                setTimeout(() => {
+                    addQuiz(Quiz).then(() => {
+                        loadDb();
+                        this.props.setLevel();
+                        Actions.main();
+                    })
+                },500)     
+            }).catch(err => console.log('errrrr', err))
+        }, 500)
     }
     render(){
         return(
@@ -37,7 +38,7 @@ class InitComponent extends Component {
                 <Text style={styles.number}>Yoruba Numerals</Text>
 
                 <View style={styles.progressContainer}>
-                    <Text style={{color: colors.tert, fontWeight: '400'}}>Setting Up -- {this.state.stage}</Text>
+                    <Text style={{color: colors.tert, fontWeight: '400'}}>Eto awọn ikojọpọ -- {this.state.stage}</Text>
                     <ProgressBarAndroid styleAttr="Horizontal" style={{width: '100%', marginTop: 10}}/>
                 </View>
             </View>
