@@ -5,11 +5,8 @@ import {fetchQuiz} from '../models/quizModel'
 
 export default class Page1 extends Component {
   componentDidMount(){
-    fetchQuiz().then((no) => {
-      // console.log('qq', no)
-        ToastAndroid.show('gggggg', ToastAndroid.LONG)
-    }).catch(err => console.log('errrrr', err))
-}
+
+  }
   render() {
     return (
       <View>

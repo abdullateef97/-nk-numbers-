@@ -40,7 +40,10 @@ import colors from '../api/colors'
 
   _renderLevel(index, unlocked){
     return(
-        <TouchableOpacity onPress={() => Actions.p1()} activeOpacity={0.8}>
+        <TouchableOpacity onPress={() => {
+            this.props.selectLevel(index)
+            Actions.p1()}
+            } activeOpacity={0.8}>
         <Card >
             <View>
                 <Text style={styles.text}> Ìpele {constants.levels[index]}</Text>
@@ -62,7 +65,8 @@ const mapStateToProps = state => {
 
 const mapDispatchToProp = (dispatch) => {
     return bindActionCreators({
-        getLevel: ActionCreators.getLevel
+        getLevel: ActionCreators.getLevel,
+        selectLevel: ActionCreators.selectLevel
     }, dispatch)
 }
 

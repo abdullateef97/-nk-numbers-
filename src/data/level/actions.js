@@ -1,5 +1,5 @@
 
-import {level_loading_start, level_loading_success, level_loading_failed} from './actionTypes';
+import {level_loading_start, level_loading_success, level_loading_failed, select_level} from './actionTypes';
 import {getCurrentLevel, setLevel as setNewLevel} from '../../api/async'
 
 const LevelLoadingStart = (dispatch) => {
@@ -21,6 +21,15 @@ const LevelLoadingSuccess = (dispatch, activeLevel) => {
     })
 }
 
+const SelectLevel = (dispatch, level) => {
+    dispatch({
+        type: select_level,
+        payload: {
+            selectedLevel: level
+        }
+    })
+}
+
 export const getLevel = () => {
 
     return dispatch => {
@@ -37,4 +46,10 @@ export const setLevel = () => {
             LevelLoadingSuccess(dispatch, newLev)
         })
     } 
+}
+
+export const selectLevel = (level) => {
+    return dispatch =>{
+        SelectLevel(dispatch, level)
+    }
 }

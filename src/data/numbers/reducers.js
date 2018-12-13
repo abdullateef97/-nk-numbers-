@@ -15,5 +15,7 @@ export default (state = initState, actions) => {
             return {...state, ...actions.payload}
         case numbers_loading_failed:
             return {...state,...actions.payload}
+        default:
+            return {...state}
     }
 }

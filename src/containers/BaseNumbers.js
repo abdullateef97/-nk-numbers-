@@ -6,7 +6,8 @@ import {bindActionCreators} from 'redux'
 
  class BaseNumber extends Component {
      componentDidMount(){
-         this.props.fetchNumbers();
+         console.log(1222)
+        //  this.props.fetchNumbers();
      }
   render() {
     return this.props.children
@@ -20,7 +21,10 @@ const mapDispatchToProps = dispatch => {
 }
 
 const mapStateToProps = state => {
-    return {}
+    console.log('ddd', state)
+    return {
+        level: state.level
+    }
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(BaseNumber)
