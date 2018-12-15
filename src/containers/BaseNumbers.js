@@ -2,12 +2,14 @@ import React, { Component } from 'react'
 import { Text, View } from 'react-native';
 import {connect} from 'react-redux';
 import ActionCreators from '../store/actions';
-import {bindActionCreators} from 'redux'
+import {bindActionCreators} from 'redux';
+import constants from '../api/constants';
+import {Actions} from 'react-native-router-flux'
 
  class BaseNumber extends Component {
+     
      componentDidMount(){
-         console.log(1222)
-        //  this.props.fetchNumbers();
+         this.props.fetchNumbers(this.props.level.selectedLevel);
      }
   render() {
     return this.props.children
@@ -21,7 +23,6 @@ const mapDispatchToProps = dispatch => {
 }
 
 const mapStateToProps = state => {
-    console.log('ddd', state)
     return {
         level: state.level
     }

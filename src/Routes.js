@@ -24,7 +24,7 @@ const Kernel = (props) => {
                     drawerIcon={menuIcon}
                     >
                         <Scene key="levels" component={LevelScene}  title="Ìpele" hideNavBar={false}/>
-                        <Scene key="p1" component={P1} />
+                        <Scene key="numbers" component={NumbersScene} hideNavBar={false} title="Ònkà"/>
                     </Drawer>
                 </Stack>
             </Stack>

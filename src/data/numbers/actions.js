@@ -36,9 +36,14 @@ const numberFetchingFailed = (dispatch, err) => {
 
 export const fetchNumberObj = level =>{
     return (dispatch) => {
-        console.log(1111);
         numberFetchingStart(dispatch);
         return fetchNumber(level).then(numberObj => numberFetchingSuccess(dispatch, numberObj))
             .catch(err => numberFetchingFailed(dispatch, err))
+    }
+}
+
+export const fetchNumberLoading = () => {
+    return dispatch => {
+        numberFetchingStart(dispatch)
     }
 }

@@ -1,7 +1,7 @@
 import {numbers_loading_failed, numbers_loading_start, numbers_loading_success} from './actionTypes';
 
 const initState = {
-    isFetching: false,
+    isFetching: true,
     numberObj: null,
     failed: false,
     err: ''   

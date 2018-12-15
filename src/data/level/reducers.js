@@ -4,7 +4,7 @@ import {level_loading_start, level_loading_failed, level_loading_success, select
 const initState = {
     isLoadingLevel: false,
     activeLevel: 1,
-    selectedLevel: null
+    selectedLevel: 1
 }
 
 const LevelReducer = (state = initState, actions) => {
