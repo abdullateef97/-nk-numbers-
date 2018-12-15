@@ -17,15 +17,15 @@ const Kernel = (props) => {
                 <Scene key="init" component={Init} initial={!props.loaded} hideNavBar={true}/>
 
                 <Stack key="main" initial={props.loaded} hideNavBar={true}>
-                    <Drawer
+                    {/* <Drawer
                     key="drawer"
                     contentComponent={DrawerContainer}
                     drawerWidth={250}
                     drawerIcon={menuIcon}
-                    >
+                    > */}
                         <Scene key="levels" component={LevelScene}  title="Ìpele" hideNavBar={false}/>
-                        <Scene key="numbers" component={NumbersScene} hideNavBar={false} title="Ònkà"/>
-                    </Drawer>
+                        <Scene key="numbers" component={NumbersScene} hideNavBar={false} title="Ònkà" />
+                    {/* </Drawer> */}
                 </Stack>
             </Stack>
         </Router>
