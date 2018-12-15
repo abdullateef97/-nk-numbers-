@@ -10,7 +10,7 @@ import Loading from './_partials/Loading'
 import ActionCreators from '../store/actions';
 import * as IconNames from '../api/IconNames'
 import colors from '../api/colors'
-
+import FAB from 'react-native-fab'
 
  class Numbers extends Component {
 
@@ -53,21 +53,28 @@ import colors from '../api/colors'
       console.log(this.state.numbersArr)
       return (
         <View style={{flex: 1, flexDirection: 'row', }}>
-        <FlatList
-        data={this.state.numbersArr}
-        renderItem = {
-          ({item}) => this._renderFlatListItem(item)      }
-        keyExtractor = {(item) => item.number.toString()}
-        numColumns={2}
-        contentContainerStyle={{justifyContent: "space-between"}}
-        />
+          <FlatList
+          data={this.state.numbersArr}
+          renderItem = {
+            ({item, index}) => this._renderFlatListItem(item, index)      }
+          keyExtractor = {(item) => item.number.toString()}
+          numColumns={2}
+          contentContainerStyle={{justifyContent: "space-between"}}
+          />
+
+          <FAB 
+          buttonColor={colors.primaryLight}
+          iconTextColor={'black'}
+          iconTextComponent= {<Icons name={IconNames.FORWARD}/>}
+          />
         </View>
       )
     }
     
   }
 
-  _renderFlatListItem(item){
+  _renderFlatListItem(item, index){
+    console.log(index)
     const {number, yoruba} = item
     return (
         <Card containerStyle={{flex: 0.5, borderWidth: 2, borderColor: colors.tert, justifyContent: 'center', alignItems: "center"}}>
