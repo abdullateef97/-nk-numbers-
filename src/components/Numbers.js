@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { Text, View, ScrollView, StyleSheet, ActivityIndicator, ViewPagerAndroid, FlatList } from 'react-native';
+import { Text, View, ScrollView, StyleSheet, ActivityIndicator, TouchableOpacity, FlatList } from 'react-native';
 import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {Card} from 'react-native-elements';
@@ -61,11 +61,14 @@ import FAB from 'react-native-fab'
           numColumns={2}
           contentContainerStyle={{justifyContent: "space-between"}}
           />
-
+          <View
+            style={{height: 25, flex: 1}}
+            />
           <FAB 
           buttonColor={colors.primaryLight}
           iconTextColor={'black'}
           iconTextComponent= {<Icons name={IconNames.FORWARD}/>}
+          onClickAction = {() => Actions.numbers_pager({index: 0})}
           />
         </View>
       )
@@ -74,19 +77,19 @@ import FAB from 'react-native-fab'
   }
 
   _renderFlatListItem(item, index){
-    console.log(index)
     const {number, yoruba} = item
     return (
-        <Card containerStyle={{flex: 0.5, borderWidth: 2, borderColor: colors.tert, justifyContent: 'center', alignItems: "center"}}>
+      <TouchableOpacity activeOpacity={0.9} onPress={() => Actions.numbers_pager({index: index})} style={{flex: 0.5,}}>
+        <Card containerStyle={{ flex: 1,justifyContent: 'center', alignItems: "center", borderWidth: 3, borderColor: colors.tert,}}>
             <Text style={{fontSize: 19, fontWeight: '900', color: colors.primary}}>{number}</Text>
             <Text style={{fontSize: 16, fontStyle: "italic"}}>{yoruba}</Text>
         </Card>
+      </TouchableOpacity>
     )
   }
 
   _renderViewPagerElement(){
     // const numberArr = this.props.numberObj.numbers;
-    console.log(this.state.numbersArr)
     
      this.state.numbersArr.map((value, index) => {
       return (
