@@ -14,27 +14,44 @@ import colors from '../api/colors'
 
  class Numbers extends Component {
 
+  state= {
+    isFetching: true
+  }
     
 
     componentDidMount(){
 
     }
 
+    static getDerivedStateFromProps(nextProps, prevState){
+      if(nextProps.isFetching !== prevState.isFetching){
+        return {
+          isFetching: nextProps.isFetching
+        }
+      }
+      return null
+    }
+
     componentWillUnmount(){ 
       this.props.fetchNumberLoading()
     }
   render() {
+    // {this._renderContent()}
     return (
-      <View style={{flex: 1}}>
+      <View style={{flex: 1, justifyContent: "center", alignItems: "center"}}>
         {this._renderContent()}
       </View>
     )
   }
 
   _renderContent(){
-    if(this.props.isFetching){
+    if(this.state.isFetching){
       return <Loading/>
+    }else{
+      console.log(this.props.numberObj.numbers[0])
+      return <Text>{this.props.numberObj.level}</Text>
     }
+    
   }
 
   
@@ -45,7 +62,7 @@ const mapStateToProps = state => {
   return {
     isFetching: state.number.isFetching,
     numberObj: state.number.numberObj,
-    selectedLevel: state.level.selectedLevel
+    selectedLevel: state.level.selectedLevel,
   }
 }
 
