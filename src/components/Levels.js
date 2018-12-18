@@ -90,12 +90,12 @@ import colors from '../api/colors'
   }
 
   _onPress(index,unlocked){
-    //   if(unlocked){
+      if(unlocked){
         this.props.selectLevel(index)
         Actions.numbers()
-    //   }else{
-    //       this.setState({isModalVisible: true})
-    //   }
+      }else{
+          this.setState({isModalVisible: true})
+      }
   }
 }
 

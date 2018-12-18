@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { Text, View, ViewPagerAndroid } from 'react-native';
 import {connect} from 'react-redux';
+import NumberObj from './NumberObjects'
 import Loading from './_partials/Loading'
 
  class NumbersViewPager extends Component {
@@ -39,8 +40,7 @@ import Loading from './_partials/Loading'
   _renderPageElement(pageItem, key){
       return (
           <View style={{flex: 1, justifyContent: "center", alignItems: 'center'}} key={key}>
-              <Text>{pageItem.number}</Text>
-              <Text>{pageItem.yoruba}</Text>
+              <NumberObj count={pageItem.number}/>
           </View>
       )
   }

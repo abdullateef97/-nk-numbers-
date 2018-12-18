@@ -6,7 +6,8 @@ import {Card} from 'react-native-elements';
 import Icons from 'react-native-vector-icons/Ionicons';
 import {Actions} from 'react-native-router-flux'
 import constants from '../api/constants';
-import Loading from './_partials/Loading'
+import Loading from './_partials/Loading';
+import NumberObjects from './NumberObjects'
 import ActionCreators from '../store/actions';
 import * as IconNames from '../api/IconNames'
 import colors from '../api/colors'
@@ -59,7 +60,6 @@ import FAB from 'react-native-fab'
             ({item, index}) => this._renderFlatListItem(item, index)      }
           keyExtractor = {(item) => item.number.toString()}
           numColumns={2}
-          contentContainerStyle={{justifyContent: "space-between"}}
           />
           <View
             style={{height: 25, flex: 1}}
@@ -79,7 +79,7 @@ import FAB from 'react-native-fab'
   _renderFlatListItem(item, index){
     const {number, yoruba} = item
     return (
-      <TouchableOpacity activeOpacity={0.9} onPress={() => Actions.numbers_pager({index: index})} style={{flex: 0.5,}}>
+      <TouchableOpacity activeOpacity={0.9} onPress={() => Actions.numbers_pager({index: index})} style={{ borderRightColor: 'blue', borderRightWidth: 2}}>
         <Card containerStyle={{ flex: 1,justifyContent: 'center', alignItems: "center", borderWidth: 3, borderColor: colors.tert,}}>
             <Text style={{fontSize: 19, fontWeight: '900', color: colors.primary}}>{number}</Text>
             <Text style={{fontSize: 16, fontStyle: "italic"}}>{yoruba}</Text>
@@ -94,7 +94,7 @@ import FAB from 'react-native-fab'
      this.state.numbersArr.map((value, index) => {
       return (
         <View key={index}>
-          <Text> {value.number}</Text>
+            <NumberObjects count={value}/>
         </View>
       )
     })
