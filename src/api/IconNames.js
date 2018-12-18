@@ -5,3 +5,5 @@ export const UNLOCKED = Platform.select({ios: 'ios-unlock', android: 'md-unlock'
 export const MENU = Platform.select({ios: 'ios-menu', android: 'md-menu'})
 export const FORWARD = Platform.select({ios: 'ios-arrow-forward', android: 'md-arrow-forward'})
 export const HOME = Platform.select({ios: 'ios-home', android: 'md-home'})
+export const FOOTBALL = Platform.select({ios : 'ios-football', android: 'md-football'});
+
