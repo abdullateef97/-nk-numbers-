@@ -39,8 +39,13 @@ import Loading from './_partials/Loading'
 
   _renderPageElement(pageItem, key){
       return (
-          <View style={{flex: 1, justifyContent: "center", alignItems: 'center'}} key={key}>
+          <View style={{flex: 1}} key={key}>
+            <View style={{height: 150}}>
               <NumberObj count={pageItem.number}/>
+            </View>
+            <View>
+                
+            </View>
           </View>
       )
   }

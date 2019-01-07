@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
         padding: 30,
         justifyContent: 'center',
         alignItems: 'center',
-        flexWrap: 'wrap'
+        flexWrap: 'wrap',
     }
 })
 
