@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
-import { Text, View, ViewPagerAndroid } from 'react-native';
+import { Text, View, ViewPagerAndroid, ScrollView } from 'react-native';
 import {connect} from 'react-redux';
+import {List} from 'react-native-elements'
 import NumberObj from './NumberObjects'
-import Loading from './_partials/Loading'
+import Loading from './_partials/Loading';
+import NumberItem from './NumberItem'
 
  class NumbersViewPager extends Component {
 
@@ -39,14 +41,21 @@ import Loading from './_partials/Loading'
 
   _renderPageElement(pageItem, key){
       return (
-          <View style={{flex: 1}} key={key}>
-            <View style={{height: 150}}>
-              <NumberObj count={pageItem.number}/>
-            </View>
-            <View>
-                
-            </View>
-          </View>
+    
+        <ScrollView>
+        <List containerStyle={{borderBottomWidth :0,borderTopWidth : 0,marginTop:0,
+        paddingBottom : 50}}>
+        
+            <View style={{height: 90}}>
+                <NumberObj count={pageItem.number}/>
+                </View>
+            <NumberItem title="Ònkà" value={pageItem.number}/>
+            <NumberItem title = {'Orúko̩'} value={pageItem.yoruba}/>
+            <NumberItem title="Àlàyé ní ge̩e̩si" value={pageItem.explanation}/>
+            <NumberItem title="Àlàyé ní yorùbá" value={pageItem.alaye}/>
+
+        </List>
+        </ScrollView>
       )
   }
 }

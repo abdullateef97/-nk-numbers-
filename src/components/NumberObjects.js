@@ -26,7 +26,11 @@ class NumberObjects extends Component{
     _renderObjects(count){
         if(count < 15){
             return Array.from(new Array(count), (val, index) => index+1).map((val, index) => {
-                return <Icons name={IconNames.FOOTBALL} size= {17} />
+                return (
+                <View style={{padding: 7}}>
+                <Icons name={IconNames.FOOTBALL} size= {40} color={colors.primaryLight} />
+                </View>
+                )
             })
         }
     }
