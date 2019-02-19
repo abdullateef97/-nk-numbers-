@@ -51,7 +51,6 @@ import FAB from 'react-native-fab'
     if(this.state.isFetching){
       return <Loading/>
     }else{
-      console.log(this.state.numbersArr)
       return (
         <View style={{flex: 1, flexDirection: 'row', }}>
           <FlatList
@@ -79,7 +78,7 @@ import FAB from 'react-native-fab'
   _renderFlatListItem(item, index){
     const {number, yoruba} = item
     return (
-      <TouchableOpacity activeOpacity={0.9} onPress={() => Actions.numbers_pager({index: index})} style={{ borderRightColor: 'blue', borderRightWidth: 2}}>
+      <TouchableOpacity activeOpacity={0.9} onPress={() => Actions.no({index: index})} style={{ borderRightColor: 'blue', borderRightWidth: 2}}>
         <Card containerStyle={{ flex: 1,justifyContent: 'center', alignItems: "center", borderWidth: 3, borderColor: colors.tert,}}>
             <Text style={{fontSize: 19, fontWeight: '900', color: colors.primary}}>{number}</Text>
             <Text style={{fontSize: 16, fontStyle: "italic"}}>{yoruba}</Text>

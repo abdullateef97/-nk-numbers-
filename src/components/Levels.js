@@ -50,7 +50,7 @@ import colors from '../api/colors'
   }
 
   _renderModal(){
-      return (
+    return (
         <Modal isVisible={this.state.isModalVisible}
                     onBackdropPress={() => this.setState({isModalVisible: false})}
                     onBackButtonPress={() => this.setState({isModalVisible: false})}
@@ -58,12 +58,12 @@ import colors from '../api/colors'
                     >
                         <View style={{flex:1, justifyContent: "center", alignItems: "center"}}>
                             <View style={styles.modalViewStyle}>
-                                <Icons name={IconNames.LOCK} size={25} color={colors.primaryLight}/>
+                                <Icons name={IconNames.LOCK} size={25} color={colors.primary}/>
                                 <Text style={styles.modalText}> Ìpele kò sí ní sísí </Text>
                             </View>
 
                             <Button
-                                raised large backgroundColor={colors.primaryLight}
+                                raised large backgroundColor={colors.primary}
                                 title= "Pa àgbéjáde dé"
                                 onPress={() => this.setState({isModalVisible: false})}
                                 fontWeight= 'bold' fontSize={19}
@@ -81,7 +81,7 @@ import colors from '../api/colors'
             <View>
                 <Text style={styles.text}> Ìpele {constants.levels[index]}</Text>
                 <View style={styles.icon}>
-                    {unlocked === true ?  <Icons name={IconNames.UNLOCKED} size={18} color={colors.primaryLight}/> : <Icons name={IconNames.LOCK} size={18} color={colors.primaryLight} />}
+                    {unlocked === true ?  <Icons name={IconNames.UNLOCKED} size={18} color={colors.primary}/> : <Icons name={IconNames.LOCK} size={18} color={colors.primary} />}
                 </View>
             </View>
         </Card>
@@ -90,12 +90,13 @@ import colors from '../api/colors'
   }
 
   _onPress(index,unlocked){
-      if(unlocked){
+    //   if(unlocked){
         this.props.selectLevel(index)
         Actions.numbers()
-      }else{
-          this.setState({isModalVisible: true})
-      }
+    //   }else{
+    //       this.setState({isModalVisible: true})
+    //       return null;
+    //   }
   }
 }
 

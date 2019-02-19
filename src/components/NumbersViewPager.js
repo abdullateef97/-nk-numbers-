@@ -17,7 +17,6 @@ import NumberItem from './NumberItem'
         this.setState({pages: pages})
     }
   render() {
-      console.log(this.state.pages)
     return (
       <View style={{flex: 1}}>
           {this._renderContent()}
@@ -41,21 +40,22 @@ import NumberItem from './NumberItem'
 
   _renderPageElement(pageItem, key){
       return (
-    
-        <ScrollView>
-        <List containerStyle={{borderBottomWidth :0,borderTopWidth : 0,marginTop:0,
-        paddingBottom : 50}}>
-        
-            <View style={{height: 90}}>
-                <NumberObj count={pageItem.number}/>
-                </View>
-            <NumberItem title="Ònkà" value={pageItem.number}/>
-            <NumberItem title = {'Orúko̩'} value={pageItem.yoruba}/>
-            <NumberItem title="Àlàyé ní ge̩e̩si" value={pageItem.explanation}/>
-            <NumberItem title="Àlàyé ní yorùbá" value={pageItem.alaye}/>
+        <View style={{flex: 1}}>
+          <ScrollView>
+            <List containerStyle={{borderBottomWidth :0,borderTopWidth : 0,marginTop:0,
+            paddingBottom : 50}}>
+            
+                <View style={{height: 90}}>
+                    <NumberObj count={pageItem.number}/>
+                    </View>
+                <NumberItem title="Ònkà" value={pageItem.number}/>
+                <NumberItem title = {'Orúko̩'} value={pageItem.yoruba}/>
+                <NumberItem title="Àlàyé ní ge̩e̩si" value={pageItem.explanation}/>
+                <NumberItem title="Àlàyé ní yorùbá" value={pageItem.alaye}/>
 
-        </List>
-        </ScrollView>
+            </List>
+          </ScrollView>
+        </View>
       )
   }
 }

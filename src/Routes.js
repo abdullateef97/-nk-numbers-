@@ -6,6 +6,7 @@ import colors from './api/colors'
 import {Init,P1, LevelScene, NumbersScene} from './containers/kernel';
 import DrawerContainer from './components/Drawer';
 import NumbersViewPager from './components/NumbersViewPager'
+import NumberView from './components/NumberView'
 import Icons from 'react-native-vector-icons/Ionicons';
 import * as IconNames from './api/IconNames'
 
@@ -29,6 +30,7 @@ const Kernel = (props) => {
                         <Scene key="levels" component={LevelScene}  title="Ìpele" hideNavBar={false} />
                         <Scene key="numbers" component={NumbersScene} hideNavBar={false} title="Ònkà" onRight={() => Actions.reset('main')}/>
                         <Scene key="numbers_pager" component={NumbersViewPager} hideNavBar={false} title="Ònkà" onRight={() => Actions.reset('main')}/>
+                        <Scene key="no" component={NumberView} hideNavBar={false} title="Ònkà" onRight={() => Actions.reset('main')}/>
                     {/* </Drawer> */}
                 </Stack>
             </Stack>
