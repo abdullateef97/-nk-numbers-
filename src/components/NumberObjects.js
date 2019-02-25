@@ -42,7 +42,7 @@ class NumberObjects extends Component{
 
             console.log('main', main, ' ', rem)
             return this._renderMain(main)
-            // this._renderRem(rem)
+            // return this._renderRem(rem)
         }
     }
 
@@ -65,9 +65,9 @@ class NumberObjects extends Component{
 
     _renderRem(rem){
         if(rem <= 0) return null
-           return Array.from(new Array(rem), (val, index) => index+1).map((val, index) => {
+        //    return Array.from(new Array(rem), (val, index) => index+1).map((val, index) => {
                 return this._remImg(rem)
-            })
+            // })
         
     }
 
