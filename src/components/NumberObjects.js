@@ -21,12 +21,12 @@ class NumberObjects extends Component{
         return(
             <View style={styles.viewStyle}>
                 {this._renderObjects(count)}
+                {this._renderRem(count)}
             </View>
         )
     }
 
     _renderObjects(count){
-        console.log('count1', count)
         if(count <= 15){
             
             return Array.from(new Array(count), (val, index) => index+1).map((val, index) => {
@@ -54,7 +54,7 @@ class NumberObjects extends Component{
             <View style={{padding: 7}}>
                 <Image
                     source={require('../icons/five.png')}
-                    style={{width: 40, height: 40}}
+                    style={{width: 35, height: 35}}
                 />
                 {/* <Icons name={IconNames.FOOTBALL} size= {40} color={colors.primary} /> */}
 
@@ -63,7 +63,8 @@ class NumberObjects extends Component{
         })
     }
 
-    _renderRem(rem){
+    _renderRem(count){
+        let rem = count % 5;
         if(rem <= 0) return null
         //    return Array.from(new Array(rem), (val, index) => index+1).map((val, index) => {
                 return this._remImg(rem)
@@ -78,7 +79,7 @@ class NumberObjects extends Component{
                 <View style={{padding: 7}}>
                     <Image
                         source={require('../icons/one.png')}
-                        style={{width: 30, height: 30}}
+                        style={{width: 25, height: 25}}
                     />
                 </View>
                 )
@@ -87,7 +88,7 @@ class NumberObjects extends Component{
                 <View style={{padding: 7}}>
                     <Image
                         source={require('../icons/two.png')}
-                        style={{width: 30, height: 30}}
+                        style={{width: 25, height: 25}}
                     />
                 </View>
                 )
@@ -96,7 +97,7 @@ class NumberObjects extends Component{
                 <View style={{padding: 7}}>
                     <Image
                         source={require('../icons/three.png')}
-                        style={{width: 30, height: 30}}
+                        style={{width: 25, height: 25}}
                     />
                 </View>
                 )
@@ -105,7 +106,7 @@ class NumberObjects extends Component{
                 <View style={{padding: 7}}>
                     <Image
                         source={require('../icons/four.png')}
-                        style={{width: 30, height: 30}}
+                        style={{width: 25, height: 25}}
                     />
                 </View>
                 )

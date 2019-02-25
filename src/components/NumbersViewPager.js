@@ -45,7 +45,7 @@ import NumberItem from './NumberItem'
             <List containerStyle={{borderBottomWidth :0,borderTopWidth : 0,marginTop:0,
             paddingBottom : 50}}>
             
-                <View style={{height: 90}}>
+                <View style={{flex: 1}}>
                     <NumberObj count={pageItem.number}/>
                     </View>
                 <NumberItem title="Ònkà" value={pageItem.number}/>
